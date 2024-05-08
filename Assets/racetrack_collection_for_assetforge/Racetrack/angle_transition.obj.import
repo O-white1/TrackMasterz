@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cbu5e0uhua1rk"
+path="res://.godot/imported/angle_transition.obj-6a59eae4afc604f459be498325d52349.mesh"
+
+[deps]
+
+files=["res://.godot/imported/angle_transition.obj-6a59eae4afc604f459be498325d52349.mesh"]
+
+source_file="res://Assets/racetrack_collection_for_assetforge/Racetrack/angle_transition.obj"
+dest_files=["res://.godot/imported/angle_transition.obj-6a59eae4afc604f459be498325d52349.mesh", "res://.godot/imported/angle_transition.obj-6a59eae4afc604f459be498325d52349.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

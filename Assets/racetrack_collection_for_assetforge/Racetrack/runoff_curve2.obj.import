@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dddyhtdajj4ny"
+path="res://.godot/imported/runoff_curve2.obj-647e22bc83e0a668dc1c11bad5409954.mesh"
+
+[deps]
+
+files=["res://.godot/imported/runoff_curve2.obj-647e22bc83e0a668dc1c11bad5409954.mesh"]
+
+source_file="res://Assets/racetrack_collection_for_assetforge/Racetrack/runoff_curve2.obj"
+dest_files=["res://.godot/imported/runoff_curve2.obj-647e22bc83e0a668dc1c11bad5409954.mesh", "res://.godot/imported/runoff_curve2.obj-647e22bc83e0a668dc1c11bad5409954.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://t43xs31ybhmr"
+path="res://.godot/imported/runoff_transition2.obj-0a6bb12a806d9f78f978978ee7c3dd30.mesh"
+
+[deps]
+
+files=["res://.godot/imported/runoff_transition2.obj-0a6bb12a806d9f78f978978ee7c3dd30.mesh"]
+
+source_file="res://Assets/racetrack_collection_for_assetforge/Racetrack/runoff_transition2.obj"
+dest_files=["res://.godot/imported/runoff_transition2.obj-0a6bb12a806d9f78f978978ee7c3dd30.mesh", "res://.godot/imported/runoff_transition2.obj-0a6bb12a806d9f78f978978ee7c3dd30.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

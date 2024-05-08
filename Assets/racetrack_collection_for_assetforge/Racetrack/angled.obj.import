@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c0i27r8v72ejx"
+path="res://.godot/imported/angled.obj-c95d829925b34b887e206b8a74d9a839.mesh"
+
+[deps]
+
+files=["res://.godot/imported/angled.obj-c95d829925b34b887e206b8a74d9a839.mesh"]
+
+source_file="res://Assets/racetrack_collection_for_assetforge/Racetrack/angled.obj"
+dest_files=["res://.godot/imported/angled.obj-c95d829925b34b887e206b8a74d9a839.mesh", "res://.godot/imported/angled.obj-c95d829925b34b887e206b8a74d9a839.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

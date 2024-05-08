@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://damd8blsdd7ux"
+path="res://.godot/imported/curve3.obj-57c6b1ea9cef5ce21f4c4a99d54817e5.mesh"
+
+[deps]
+
+files=["res://.godot/imported/curve3.obj-57c6b1ea9cef5ce21f4c4a99d54817e5.mesh"]
+
+source_file="res://Assets/racetrack_collection_for_assetforge/Racetrack/curve3.obj"
+dest_files=["res://.godot/imported/curve3.obj-57c6b1ea9cef5ce21f4c4a99d54817e5.mesh", "res://.godot/imported/curve3.obj-57c6b1ea9cef5ce21f4c4a99d54817e5.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

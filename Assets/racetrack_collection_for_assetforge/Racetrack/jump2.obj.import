@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bsmc7ys57eiy1"
+path="res://.godot/imported/jump2.obj-f1264575ca76ab24bed18aac6cdd14f2.mesh"
+
+[deps]
+
+files=["res://.godot/imported/jump2.obj-f1264575ca76ab24bed18aac6cdd14f2.mesh"]
+
+source_file="res://Assets/racetrack_collection_for_assetforge/Racetrack/jump2.obj"
+dest_files=["res://.godot/imported/jump2.obj-f1264575ca76ab24bed18aac6cdd14f2.mesh", "res://.godot/imported/jump2.obj-f1264575ca76ab24bed18aac6cdd14f2.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
