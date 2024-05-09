@@ -2,9 +2,9 @@ extends VehicleBody3D
 
 @export var MAX_STEER = .4
 @export var level = ""
-var MAX_RPM = 600
-var MAX_TORQUE = 400
-var HORSE_POWER = 400
+var MAX_RPM = 150
+var MAX_TORQUE = 100
+var HORSE_POWER = 100
 
 
 func _ready():
