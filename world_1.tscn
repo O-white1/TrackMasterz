@@ -1,6 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://c2agmkijycbve"]
 
 [ext_resource type="MeshLibrary" uid="uid://dkfe7uu51rykd" path="res://Track.tres" id="1_w1unk"]
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://bnto3syd2ib2w" path="res://car.tscn" id="2_h337v"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wy2ex"]
@@ -13,6 +14,20 @@ sky_material = SubResource("ProceduralSkyMaterial_wy2ex")
 [sub_resource type="Environment" id="Environment_3lod2"]
 background_mode = 2
 sky = SubResource("Sky_4tf1r")
+=======
+[ext_resource type="PackedScene" uid="uid://bnto3syd2ib2w" path="res://car.tscn" id="2_7ps4j"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_oa84x"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_rkv6w"]
+sky_material = SubResource("ProceduralSkyMaterial_oa84x")
+
+[sub_resource type="Environment" id="Environment_osu54"]
+background_mode = 2
+sky = SubResource("Sky_rkv6w")
+>>>>>>> Stashed changes
 tonemap_mode = 2
 glow_enabled = true
 
@@ -33,6 +48,9 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.255638, 0, 0)
 >>>>>>> a6c172263e8b477a26095b0b10d40ae50614a413
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_osu54")
+
 [node name="GridMap" type="GridMap" parent="."]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 2.38419e-07, 0)
 mesh_library = ExtResource("1_w1unk")
@@ -47,6 +65,11 @@ transform = Transform3D(1000, 0, 0, 0, 1000, 0, 0, 0, 1, 0, 0.508058, 0)
 use_collision = true
 mesh = SubResource("PlaneMesh_44qpi")
 
+<<<<<<< Updated upstream
 [node name="Car" parent="." instance=ExtResource("2_h337v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108.479, 18.4997, -81.7251)
 level = "world_1"
+=======
+[node name="Car" parent="." instance=ExtResource("2_7ps4j")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 13.7231, 2.75997, -11.4)
+>>>>>>> Stashed changes
