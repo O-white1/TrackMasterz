@@ -15,6 +15,7 @@ func calc_engine_force(accel, rpm):
 
 func _physics_process(delta):
 	check_and_right_vehicle()
+	Reset()
 	
 	var accel = Input.get_axis("ui_down", "ui_up") * HORSE_POWER
 	
@@ -42,9 +43,14 @@ func _physics_process(delta):
 	#$centerMass.transform = $centerMass.transform.interpolate_with(self.transform, delta * 5.0)
 	#$centerMass/Camera3D.look_at(self.global_position.lerp(self.global_position + self.linear_velocity, delta * 5.0))
 
-func check_and_right_vehicle():
+func Reset():
 	if Input.is_action_pressed("Restart"):
 		var lvl = "res://" + level + ".tscn"
 		get_tree().change_scene_to_file(lvl)
-
+func check_and_right_vehicle():
+	if self.global_transform.basis.y.dot(Vector3.UP) < 0:
+		var current_rotation = self.rotation_degrees
+		current_rotation.x = 0
+		current_rotation.z = 0
+		self.rotation_degrees = current_rotation
 
