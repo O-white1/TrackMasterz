@@ -5,16 +5,17 @@
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_bqn7f"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y6uk0"]
-size = Vector3(1.98441, 0.424744, 2.09888)
+size = Vector3(4.99085, 0.424744, 10.1442)
 
 [node name="Car" type="VehicleBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.159484, 0)
 mass = 2000.0
 physics_material_override = SubResource("PhysicsMaterial_bqn7f")
 script = ExtResource("1_763ql")
+level = "world_1"
 
 [node name="frontLeft" type="VehicleWheel3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.25, 0, 0.5)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.493501, 0, 0.5)
 use_as_traction = true
 use_as_steering = true
 
@@ -22,9 +23,10 @@ use_as_steering = true
 transform = Transform3D(-8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0, 0, 0, 0.2, 0, 0, 0)
 radius = 2.0
 height = 0.5
+sides = 64
 
 [node name="frontRight" type="VehicleWheel3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.25, 0, 0.5)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.797704, 0, 0.5)
 use_as_traction = true
 use_as_steering = true
 
@@ -32,35 +34,38 @@ use_as_steering = true
 transform = Transform3D(-8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0, 0, 0, 0.2, 0, 0, 0)
 radius = 2.0
 height = 0.5
+sides = 64
 
 [node name="backLeft" type="VehicleWheel3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.25, 0, -0.5)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.753954, 0, -1.7634)
 use_as_traction = true
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="backLeft"]
 transform = Transform3D(-8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0, 0, 0, 0.2, 0, 0, 0)
 radius = 2.0
 height = 0.5
+sides = 64
 
 [node name="backRight" type="VehicleWheel3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.25, 0, -0.5)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.470759, 0, -1.86265)
 use_as_traction = true
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="backRight"]
 transform = Transform3D(-8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0, 0, 0, 0.2, 0, 0, 0)
 radius = 2.0
 height = 0.5
+sides = 64
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.00848159, 0.25)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.144913, 0.290118, -0.755661)
 shape = SubResource("BoxShape3D_y6uk0")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CollisionShape3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.397143, -0.891357)
-size = Vector3(2, 0.5, 3.78271)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0887041, 0.397143, 0.0965681)
+size = Vector3(4.84082, 0.5, 9.63928)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.587775, -2.90099)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.587775, -4.25751)
 
 [node name="centerMass" type="CSGBox3D" parent="."]
 transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 0, 0.0953882, -0.0241809)
