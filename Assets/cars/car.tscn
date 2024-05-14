@@ -12,6 +12,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.159484, 0)
 mass = 2000.0
 physics_material_override = SubResource("PhysicsMaterial_bqn7f")
 script = ExtResource("1_763ql")
+level = "world_1"
 
 [node name="frontLeft" type="VehicleWheel3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.25, 0, 0.5)
@@ -22,6 +23,7 @@ use_as_steering = true
 transform = Transform3D(-8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0, 0, 0, 0.2, 0, 0, 0)
 radius = 2.0
 height = 0.5
+sides = 64
 
 [node name="frontRight" type="VehicleWheel3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.25, 0, 0.5)
@@ -32,6 +34,7 @@ use_as_steering = true
 transform = Transform3D(-8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0, 0, 0, 0.2, 0, 0, 0)
 radius = 2.0
 height = 0.5
+sides = 64
 
 [node name="backLeft" type="VehicleWheel3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.25, 0, -0.5)
@@ -41,6 +44,7 @@ use_as_traction = true
 transform = Transform3D(-8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0, 0, 0, 0.2, 0, 0, 0)
 radius = 2.0
 height = 0.5
+sides = 64
 
 [node name="backRight" type="VehicleWheel3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.25, 0, -0.5)
@@ -50,6 +54,7 @@ use_as_traction = true
 transform = Transform3D(-8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0, 0, 0, 0.2, 0, 0, 0)
 radius = 2.0
 height = 0.5
+sides = 64
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.00848159, 0.25)

@@ -2,9 +2,9 @@ extends VehicleBody3D
 
 @export var MAX_STEER = .4
 @export var level = ""
-var MAX_RPM = 75
-var MAX_TORQUE = 50
-var HORSE_POWER = 50
+var MAX_RPM = 150
+var MAX_TORQUE = 100
+var HORSE_POWER = 100
 const Gravity = 9.8
 
 
@@ -26,6 +26,7 @@ func _physics_process(delta):
 	 # Ben what is this? 
 	#       |
 	#       v
+	"""  
 	if Input.is_action_pressed("ui_accept"):
 		MAX_RPM = 1200
 		MAX_TORQUE = 800
@@ -34,6 +35,7 @@ func _physics_process(delta):
 		MAX_RPM = 600
 		MAX_TORQUE = 400
 		HORSE_POWER = 400
+	"""
 	
 	steering = lerp(steering, Input.get_axis("ui_right", "ui_left") * MAX_STEER, delta * 5)
 	
