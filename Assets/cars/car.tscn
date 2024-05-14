@@ -14,38 +14,42 @@ physics_material_override = SubResource("PhysicsMaterial_bqn7f")
 script = ExtResource("1_763ql")
 
 [node name="frontLeft" type="VehicleWheel3D" parent="."]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.25, 0, 0.5)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.25, 0, 0.5)
 use_as_traction = true
 use_as_steering = true
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="frontLeft"]
 transform = Transform3D(-8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0, 0, 0, 0.2, 0, 0, 0)
-height = 0.1
+radius = 2.0
+height = 0.5
 
 [node name="frontRight" type="VehicleWheel3D" parent="."]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.25, 0, 0.5)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.25, 0, 0.5)
 use_as_traction = true
 use_as_steering = true
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="frontRight"]
 transform = Transform3D(-8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0, 0, 0, 0.2, 0, 0, 0)
-height = 0.1
+radius = 2.0
+height = 0.5
 
 [node name="backLeft" type="VehicleWheel3D" parent="."]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.25, 0, -0.5)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.25, 0, -0.5)
 use_as_traction = true
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="backLeft"]
 transform = Transform3D(-8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0, 0, 0, 0.2, 0, 0, 0)
-height = 0.1
+radius = 2.0
+height = 0.5
 
 [node name="backRight" type="VehicleWheel3D" parent="."]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.25, 0, -0.5)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.25, 0, -0.5)
 use_as_traction = true
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="backRight"]
 transform = Transform3D(-8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0, 0, 0, 0.2, 0, 0, 0)
-height = 0.1
+radius = 2.0
+height = 0.5
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.00848159, 0.25)
@@ -57,3 +61,6 @@ size = Vector3(2, 0.5, 3.78271)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.587775, -2.90099)
+
+[node name="centerMass" type="CSGBox3D" parent="."]
+transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 0, 0.0953882, -0.0241809)
