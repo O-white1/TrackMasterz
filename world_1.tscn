@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cwi4p68wejldu"]
 
-[ext_resource type="MeshLibrary" uid="uid://1epr56n6a8q6" path="res://Track.tres" id="1_05pa3"]
+[ext_resource type="MeshLibrary" uid="uid://1epr56n6a8q6" path="res://track.tres" id="1_05pa3"]
 [ext_resource type="PackedScene" uid="uid://bnto3syd2ib2w" path="res://Assets/cars/car.tscn" id="2_y6452"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ybdk5"]
