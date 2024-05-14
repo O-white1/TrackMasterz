@@ -2,9 +2,9 @@ extends VehicleBody3D
 
 @export var MAX_STEER = .4
 @export var level = ""
-var MAX_RPM = 150
-var MAX_TORQUE = 100
-var HORSE_POWER = 100
+var MAX_RPM = 300
+var MAX_TORQUE = 600
+var HORSE_POWER = 600
 const Gravity = 9.8
 
 
@@ -16,7 +16,7 @@ func calc_engine_force(accel, rpm):
 
 func _physics_process(delta):
 	
-	check_and_right_vehicle()
+	
 	Reset()
 	
 	steering = lerp(steering, Input.get_axis("ui_right", "ui_left") * MAX_STEER, delta * 5)
@@ -53,12 +53,10 @@ func _physics_process(delta):
 
 func Reset():
 	if Input.is_action_pressed("Restart"):
-		var lvl = "res://" + level + ".tscn"
-		get_tree().change_scene_to_file(lvl)
+		check_and_right_vehicle()
 func check_and_right_vehicle():
-	if self.global_transform.basis.y.dot(Vector3.UP) < 0:
-		var current_rotation = self.rotation_degrees
-		current_rotation.x = 0
-		current_rotation.z = 0
-		self.rotation_degrees = current_rotation
+	var current_rotation = self.rotation_degrees
+	current_rotation.x = 0
+	current_rotation.z = 0
+	self.rotation_degrees = current_rotation
 
