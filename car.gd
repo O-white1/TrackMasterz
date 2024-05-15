@@ -18,7 +18,7 @@ func _physics_process(delta):
 	
 	
 	Reset()
-	
+	HardReset()
 	steering = lerp(steering, Input.get_axis("ui_right", "ui_left") * MAX_STEER, delta * 5)
 	var accel = Input.get_axis("ui_down", "ui_up") * HORSE_POWER
 	$backLeft.engine_force = calc_engine_force(accel, abs($backLeft.get_rpm()))
@@ -50,7 +50,9 @@ func _physics_process(delta):
 	
 	$centerMass.global_position = $centerMass.global_position.lerp(self.global_position, delta * 20.0)
 	$centerMass.transform = $centerMass.transform.interpolate_with(self.transform, delta * 5.0)
-
+func HardReset():
+	if Input.is_action_just_pressed("HardReset"):
+		get_tree().change_scene_to_file("res://world_1.tscn")
 func Reset():
 	if Input.is_action_pressed("Restart"):
 		check_and_right_vehicle()
