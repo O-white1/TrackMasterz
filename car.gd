@@ -2,9 +2,9 @@ extends VehicleBody3D
 
 @export var MAX_STEER = .4
 @export var level = ""
-var MAX_RPM = 300
-var MAX_TORQUE = 600
-var HORSE_POWER = 600
+var MAX_RPM = 600
+var MAX_TORQUE = 900
+var HORSE_POWER = 900
 const Gravity = 9.8
 
 
