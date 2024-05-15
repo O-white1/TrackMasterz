@@ -23,7 +23,7 @@ use_as_steering = true
 transform = Transform3D(-8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0, 0, 0, 0.2, 0, 0, 0)
 radius = 2.5
 height = 0.5
-sides = 64
+sides = 32
 
 [node name="frontRight" type="VehicleWheel3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.66, 0, 0.5)
@@ -34,7 +34,7 @@ use_as_steering = true
 transform = Transform3D(-8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0, 0, 0, 0.2, 0, 0, 0)
 radius = 2.5
 height = 0.5
-sides = 64
+sides = 32
 
 [node name="backLeft" type="VehicleWheel3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.66, 0, -2)
@@ -44,7 +44,7 @@ use_as_traction = true
 transform = Transform3D(-8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0, 0, 0, 0.2, 0, 0, 0)
 radius = 2.5
 height = 0.5
-sides = 64
+sides = 32
 
 [node name="backRight" type="VehicleWheel3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.66, 0, -2)
@@ -54,7 +54,7 @@ use_as_traction = true
 transform = Transform3D(-8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0, 0, 0, 0.2, 0, 0, 0)
 radius = 2.5
 height = 0.5
-sides = 64
+sides = 32
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.0766163, 0.0537945, -0.8)
