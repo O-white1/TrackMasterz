@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://utf6v6qplggk"]
+
+[ext_resource type="MeshLibrary" uid="uid://1epr56n6a8q6" path="res://Track.tres" id="1_o31na"]
+
+[node name="world_2" type="Node3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.559533, 0)
+size = Vector3(100000, 1, 100000)
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource("1_o31na")
+cell_size = Vector3(1, 1, 1)
+data = {
+"cells": PackedInt32Array(2, 0, 6, 2, 65535, 6, 2, 65534, 6, -65534, 65532, 655372, -65534, 65533, 11, 2, 65533, 10, -65534, 65531, 655372, -65534, 65530, 655372, -65534, 65529, 655372, -65534, 65528, 655371, -65534, 65526, 11, -65534, 65525, 12, -65534, 65524, 655371)
+}
+metadata/_editor_floor_ = Vector3(0, -1, 0)

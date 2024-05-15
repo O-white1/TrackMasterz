@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bnto3syd2ib2w"]
 
-[ext_resource type="Script" path="res://car.gd" id="1_763ql"]
+[ext_resource type="Script" path="res://Assets/car.gd" id="1_763ql"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_bqn7f"]
 
