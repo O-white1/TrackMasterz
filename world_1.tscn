@@ -41,3 +41,5 @@ use_collision = true
 
 [node name="Car" parent="." instance=ExtResource("2_y6452")]
 transform = Transform3D(-2.19752, 0, 0.0346585, 0, 1.22701, 0, -0.0789663, 0, -0.964495, 4.74359, 5.96718, -1)
+
+[connection signal="tree_entered" from="Car" to="Car" method="_on_tree_entered"]
