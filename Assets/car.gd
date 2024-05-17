@@ -52,7 +52,7 @@ func _physics_process(delta):
 	$centerMass.transform = $centerMass.transform.interpolate_with(self.transform, delta * 5.0)
 func HardReset():
 	if Input.is_action_just_pressed("HardReset"):
-		get_tree().change_scene_to_file("res://world_1.tscn")
+		get_tree().change_scene_to_file("res://"+level+".tscn")
 func Reset():
 	if Input.is_action_pressed("Restart"):
 		check_and_right_vehicle()
