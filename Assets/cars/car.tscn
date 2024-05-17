@@ -8,7 +8,6 @@
 size = Vector3(3.97774, 0.424744, 10.1442)
 
 [node name="Car" type="VehicleBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.159484, 0)
 mass = 2000.0
 physics_material_override = SubResource("PhysicsMaterial_bqn7f")
 script = ExtResource("1_763ql")
@@ -57,7 +56,7 @@ height = 0.5
 sides = 32
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.0766163, 0.0537945, -0.8)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.1, -0.7)
 shape = SubResource("BoxShape3D_y6uk0")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CollisionShape3D"]
@@ -70,4 +69,4 @@ transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 0, 0.0953882, -0.
 size = Vector3(0, 0, 0)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-1, 1.77636e-15, -8.74228e-08, -1.77432e-08, 0.979187, 0.202958, 8.56033e-08, 0.202958, -0.979187, 0, 2.71142, -5.20308)
+transform = Transform3D(-1, -2.70151e-08, 8.3144e-08, 0, 0.951056, 0.309017, -8.74228e-08, 0.309017, -0.951056, 0, 2.71142, -5.20308)
