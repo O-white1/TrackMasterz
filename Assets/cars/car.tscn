@@ -55,6 +55,13 @@ radius = 2.5
 height = 0.5
 sides = 32
 
+[node name="centerMass" type="CSGBox3D" parent="."]
+transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 0, 0.0953882, -0.881179)
+size = Vector3(0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-1, -2.70151e-08, 8.3144e-08, 0, 0.951056, 0.309017, -8.74228e-08, 0.309017, -0.951056, 0, 2.71142, -5.20308)
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.1, -0.7)
 shape = SubResource("BoxShape3D_y6uk0")
@@ -63,10 +70,3 @@ shape = SubResource("BoxShape3D_y6uk0")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.233643, 0, 0)
 use_collision = true
 size = Vector3(4.53271, 0.5, 10)
-
-[node name="centerMass" type="CSGBox3D" parent="."]
-transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 0, 0.0953882, -0.881179)
-size = Vector3(0, 0, 0)
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-1, -2.70151e-08, 8.3144e-08, 0, 0.951056, 0.309017, -8.74228e-08, 0.309017, -0.951056, 0, 2.71142, -5.20308)

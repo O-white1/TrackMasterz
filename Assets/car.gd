@@ -26,16 +26,16 @@ func _physics_process(delta):
 	 # Ben what is this? 
 	#       |
 	#       v
-	"""  
+	
 	if Input.is_action_pressed("ui_accept"):
-		MAX_RPM = 1200
-		MAX_TORQUE = 800
-		HORSE_POWER = 800
+		MAX_RPM = 400
+		MAX_TORQUE = 450
+		HORSE_POWER = 450
 	else:
-		MAX_RPM = 600
-		MAX_TORQUE = 400
-		HORSE_POWER = 400
-	"""
+		MAX_RPM = 300
+		MAX_TORQUE = 350
+		HORSE_POWER = 350
+	
 	
 	steering = lerp(steering, Input.get_axis("ui_right", "ui_left") * MAX_STEER, delta * 5)
 	
