@@ -27,7 +27,7 @@ func _physics_process(delta):
 	#       |
 	#       v
 	
-	if Input.is_action_pressed("ui_accept"):
+	if Input.is_action_pressed("goatedWithTheSWAWS"):
 		MAX_RPM = 400
 		MAX_TORQUE = 450
 		HORSE_POWER = 450
