@@ -6,16 +6,28 @@ var MAX_RPM = 300
 var MAX_TORQUE = 350
 var HORSE_POWER = 350
 const Gravity = 9.8
-
+var timer = 10
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 
 func calc_engine_force(accel, rpm):
 	return accel*MAX_TORQUE*(1 - rpm / MAX_RPM)
+	
+func Timer(): timer -= 1
 
 func _physics_process(delta):
-	
+		if Input.is_action_pressed("goatedWithTheSWAWS") and timer == 0:
+			MAX_RPM = 7500
+			MAX_TORQUE = 8000
+			HORSE_POWER = 8000
+			while timer > 0:
+				await 1
+				Timer()
+		else:
+			MAX_RPM = 300
+			MAX_TORQUE = 350
+			HORSE_POWER = 350
 	
 	Reset()
 	HardReset()
@@ -23,18 +35,7 @@ func _physics_process(delta):
 	var accel = Input.get_axis("ui_down", "ui_up") * HORSE_POWER
 	$backLeft.engine_force = calc_engine_force(accel, abs($backLeft.get_rpm()))
 	$backRight.engine_force = calc_engine_force(accel, abs($backRight.get_rpm()))
-	 # Ben what is this? 
-	#       |
-	#       v
-	
-	if Input.is_action_pressed("goatedWithTheSWAWS"):
-		MAX_RPM = 400
-		MAX_TORQUE = 450
-		HORSE_POWER = 450
-	else:
-		MAX_RPM = 300
-		MAX_TORQUE = 350
-		HORSE_POWER = 350
+
 	
 	
 	steering = lerp(steering, Input.get_axis("ui_right", "ui_left") * MAX_STEER, delta * 5)

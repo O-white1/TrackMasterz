@@ -11,6 +11,7 @@ size = Vector3(3.97774, 0.424744, 10.1442)
 mass = 2000.0
 physics_material_override = SubResource("PhysicsMaterial_bqn7f")
 script = ExtResource("1_763ql")
+MAX_STEER = null
 level = "world_1"
 
 [node name="frontLeft" type="VehicleWheel3D" parent="."]
