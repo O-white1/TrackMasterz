@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cwi4p68wejldu"]
+[gd_scene load_steps=7 format=3 uid="uid://cwi4p68wejldu"]
 
 [ext_resource type="MeshLibrary" uid="uid://7tuh7tgnn4so" path="res://track.tres" id="1_ubw2b"]
 [ext_resource type="PackedScene" uid="uid://bnto3syd2ib2w" path="res://Assets/cars/car.tscn" id="2_y6452"]
+[ext_resource type="PackedScene" uid="uid://bjfumrcl2ug8b" path="res://level_un_de_rs_co_re_swaw_s.tscn" id="3_n32wc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ybdk5"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -52,8 +53,12 @@ metadata/_editor_floor_ = Vector3(0, 0, 0)
 transform = Transform3D(1000, 0, 0, 0, 1000, 0, 0, 0, 1000, 0, -500, 0)
 use_collision = true
 
-[node name="Car" parent="." instance=ExtResource("2_y6452")]
+[node name="Car" parent="." groups=["Player"] instance=ExtResource("2_y6452")]
 transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 5, 8.5, -1)
 MAX_STEER = 0.5
+
+[node name="LevelUnDeRsCoReSwawS" parent="." instance=ExtResource("3_n32wc")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -5.10329, 18.573, -45.7046)
+next_level = "world_2"
 
 [connection signal="tree_entered" from="Car" to="Car" method="_on_tree_entered"]

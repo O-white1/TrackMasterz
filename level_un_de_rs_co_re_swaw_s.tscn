@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjfumrcl2ug8b"]
+
+[ext_resource type="Script" path="res://level_un_de_rs_co_re_swaw_s.gd" id="1_jnn4v"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_l0pid"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pcrtr"]
+
+[node name="LevelUnDeRsCoReSwawS" type="Area3D"]
+script = ExtResource("1_jnn4v")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.01, 0, 0, 0, 2, 0, 0, 0, 4, 0, 0, 0)
+mesh = SubResource("BoxMesh_l0pid")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.01, 0, 0, 0, 2, 0, 0, 0, 4, 0, 0, 0)
+shape = SubResource("BoxShape3D_pcrtr")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
