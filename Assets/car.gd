@@ -17,17 +17,17 @@ func calc_engine_force(accel, rpm):
 func Timer(): timer -= 1
 
 func _physics_process(delta):
-		if Input.is_action_pressed("goatedWithTheSWAWS") and timer == 0:
-			MAX_RPM = 7500
-			MAX_TORQUE = 8000
-			HORSE_POWER = 8000
-			while timer > 0:
-				await 1
-				Timer()
-		else:
-			MAX_RPM = 300
-			MAX_TORQUE = 350
-			HORSE_POWER = 350
+	if Input.is_action_pressed("goatedWithTheSWAWS") and timer == 10:
+		MAX_RPM = 7500
+		MAX_TORQUE = 8000
+		HORSE_POWER = 8000
+		while timer > 0:
+			await 1
+			Timer()
+	else:
+		MAX_RPM = 300
+		MAX_TORQUE = 350
+		HORSE_POWER = 350
 	
 	Reset()
 	HardReset()

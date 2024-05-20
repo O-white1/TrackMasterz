@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=3 uid="uid://cwi4p68wejldu"]
+
+[ext_resource type="MeshLibrary" uid="uid://7tuh7tgnn4so" path="res://track.tres" id="1_ubw2b"]
+[ext_resource type="PackedScene" uid="uid://bnto3syd2ib2w" path="res://Assets/cars/car.tscn" id="2_y6452"]
+[ext_resource type="PackedScene" uid="uid://bjfumrcl2ug8b" path="res://level_un_de_rs_co_re_swaw_s.tscn" id="3_n32wc"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ybdk5"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_pq7yi"]
+sky_material = SubResource("ProceduralSkyMaterial_ybdk5")
+
+[sub_resource type="Environment" id="Environment_r6maf"]
+background_mode = 5
+background_energy_multiplier = 4.05
+background_camera_feed_id = 3
+sky = SubResource("Sky_pq7yi")
+sky_custom_fov = 45.5
+sky_rotation = Vector3(-2.94088, 0, 0)
+ambient_light_source = 2
+ambient_light_color = Color(1, 0, 0, 1)
+ambient_light_energy = 4.04
+tonemap_mode = 2
+tonemap_exposure = 0.05
+tonemap_white = 1.35
+glow_enabled = true
+glow_normalized = true
+glow_intensity = 2.95
+glow_strength = 2.0
+glow_bloom = 0.1
+glow_blend_mode = 1
+
+[node name="World1" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_r6maf")
+
+[node name="GridMap" type="GridMap" parent="."]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+mesh_library = ExtResource("1_ubw2b")
+cell_size = Vector3(1, 1, 1)
+data = {
+"cells": PackedInt32Array(0, 0, 655366, 0, 65535, 655366, 0, 65534, 655366, 0, 65533, 7, 0, 65532, 8, 0, 65529, 655368, 0, 65528, 655367, 0, 65527, 6, 0, 65526, 7, 0, 65525, 655372, 0, 65524, 655372, 0, 65522, 655372, 0, 65521, 655367, 0, 65520, 655366, 5, 65519, 655366, 4, 65522, 1441801, 5, 65520, 6, 5, 65521, 6, 3, 65522, 655367, 3, 65523, 655368, 65539, 65527, 655372, 65539, 65528, 655372, 65539, 65529, 11, 65539, 65530, 10, 65539, 65531, 655362, 65538, 65531, 1048578, 65538, 65528, 8, 65538, 65529, 7, 65538, 65530, 655366, 131074, 65527, 655372, 131074, 65526, 655372, 131074, 65525, 655372, 131074, 65524, 655371, 131074, 65523, 655370, 131074, 65522, 2, 131075, 65522, 1441797, 131077, 65523, 1441798, 131078, 65523, 1441798, 131079, 65523, 1441798, 131080, 65525, 1441796, 131081, 65526, 655363, 131080, 65527, 1048583, 131079, 65527, 1048584, 196614, 65527, 1048584, 262149, 65527, 1048588, 262148, 65527, 1441803, 262147, 65527, 1441802, 262146, 65527, 1441798, 262145, 65527, 1441798, 262144, 65527, 1441798, 327679, 65527, 2, 196607, 65529, 8, 65535, 65531, 8, 65535, 65532, 7, 65535, 65533, 6, 65535, 65534, 6, 65535, 65535, 6, 65535, 0, 6, 65535, 1, 1048578, 0, 1, 655362, 0, 65523, 655372, 131071, 65531, 458764, 131071, 65530, 8, 65539, 65526, 12, 3, 65518, 1441796, 2, 65518, 4, 0, 65519, 6)
+}
+metadata/_editor_floor_ = Vector3(0, 0, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1000, 0, 0, 0, 1000, 0, 0, 0, 1000, 0, -500, 0)
+use_collision = true
+
+[node name="Car" parent="." groups=["Player"] instance=ExtResource("2_y6452")]
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 5, 8.5, -1)
+MAX_STEER = 0.5
+
+[node name="LevelUnDeRsCoReSwawS" parent="." instance=ExtResource("3_n32wc")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -5.10329, 18.573, -45.7046)
+next_level = "world_2"
+
+[connection signal="tree_entered" from="Car" to="Car" method="_on_tree_entered"]
