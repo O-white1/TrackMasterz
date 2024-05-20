@@ -21,14 +21,13 @@ func _physics_process(delta):
 		MAX_RPM = 7500
 		MAX_TORQUE = 8000
 		HORSE_POWER = 8000
-		while timer > 0:
-			await 1
-			Timer()
 	else:
 		MAX_RPM = 300
 		MAX_TORQUE = 350
 		HORSE_POWER = 350
-	
+	while timer > 0:
+		await 1
+		Timer()
 	Reset()
 	HardReset()
 	steering = lerp(steering, Input.get_axis("ui_right", "ui_left") * MAX_STEER, delta * 5)
