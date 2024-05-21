@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://by5r4jow3fna"]
+
+[ext_resource type="MeshLibrary" uid="uid://7tuh7tgnn4so" path="res://track.tres" id="1_yhuan"]
+[ext_resource type="PackedScene" uid="uid://bnto3syd2ib2w" path="res://Assets/cars/car.tscn" id="2_v2ly0"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_v0cii"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_s7sca"]
+sky_material = SubResource("ProceduralSkyMaterial_v0cii")
+
+[sub_resource type="Environment" id="Environment_wodcy"]
+background_mode = 2
+sky = SubResource("Sky_s7sca")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="world_3" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+light_color = Color(1, 0.101961, 0.168627, 1)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_wodcy")
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource("1_yhuan")
+cell_size = Vector3(1, 1, 1)
+data = {
+"cells": PackedInt32Array(1, 0, 1441794, 0, 1, 655363, 65535, 2, 1048581, 65533, 3, 4, 65530, 4, 1441801, 65529, 4, 655370, 65529, 5, 655371, 65529, 6, 655372, 65529, 7, 7, 65529, 8, 6, 65529, 9, 655367, 196601, 13, 1048578, 196602, 13, 655362, 196602, 12, 655366, 65529, 10, 655368, 196605, 10, 1441795, 196604, 11, 4, 196606, 11, 655366, 196606, 12, 655366, 196606, 13, 6, 196605, 14, 1441801, 196602, 14, 655364, 196601, 15, 1048579, 196600, 14, 6, 196600, 13, 6, 196600, 12, 6, 196601, 12, 6, 196601, 11, 6, 196600, 11, 6)
+}
+metadata/_editor_floor_ = Vector3(0, 2, 0)
+
+[node name="Car" parent="." instance=ExtResource("2_v2ly0")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 1.68523, 0.869615, 1.25448)
