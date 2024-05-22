@@ -36,8 +36,7 @@ func _physics_process(delta):
 			used = false
 		if timer < 500 and used:
 			timer += 1
-	if not used:
-		$ProgressBar.value = timer
+	
 		
 	Reset()
 	HardReset()
@@ -51,17 +50,18 @@ func _physics_process(delta):
 	steering = lerp(steering, Input.get_axis("ui_right", "ui_left") * MAX_STEER, delta * 5)
 	
 	
+	$ProgressBar.value = timer
 	
 	
 	$backLeft.engine_force = calc_engine_force(accel, abs($backLeft.get_rpm()))
 	$backRight.engine_force = calc_engine_force(accel, abs($backRight.get_rpm()))
 	
 	var fwd_mps = abs((self.linear_velocity * self.transform.basis).z)
-	$Label.text = str(rounds(fwd_mps,2))
+	$Label.text = "Speed: " + str(rounds(fwd_mps,2))
 	
 	
-	$centerMass.global_position = $centerMass.global_position.lerp(self.global_position, delta * 20.0)
-	$centerMass.transform = $centerMass.transform.interpolate_with(self.transform, delta * 5.0)
+	#$centerMass.global_position = $centerMass.global_position.lerp(self.global_position, delta * 20.0)
+	#$centerMass.transform = $centerMass.transform.interpolate_with(self.transform, delta * 5.0)
 func HardReset():
 	if Input.is_action_just_pressed("HardReset"):
 		get_tree().change_scene_to_file("res://"+level+".tscn")

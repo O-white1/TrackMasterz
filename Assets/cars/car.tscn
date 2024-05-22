@@ -75,14 +75,17 @@ use_collision = true
 size = Vector3(4.53271, 0.5, 10)
 
 [node name="Label" type="Label" parent="."]
-offset_right = 1169.0
-offset_bottom = 627.0
-text = "Test"
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 1179.0
+offset_bottom = 637.0
+text = "Speed: 000"
 label_settings = SubResource("LabelSettings_m74cl")
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
-offset_left = 140.0
-offset_top = 13.0
-offset_right = 304.0
-offset_bottom = 54.0
+offset_left = 926.0
+offset_top = 28.0
+offset_right = 1090.0
+offset_bottom = 69.0
 max_value = 500.0
+show_percentage = false
