@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6eux01rtph5o"]
+
+[ext_resource type="PackedScene" uid="uid://bnto3syd2ib2w" path="res://Assets/cars/car.tscn" id="1_1y3rf"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_vkta4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rnfcg"]
+albedo_color = Color(0.317122, 0.374891, 0.815232, 1)
+albedo_texture = SubResource("NoiseTexture2D_vkta4")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1000, 0, 0, 0, 1, 0, 0, 0, 1000, 0, 0, 0)
+use_collision = true
+material = SubResource("StandardMaterial3D_rnfcg")
+
+[node name="Car" parent="." instance=ExtResource("1_1y3rf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.11149, 1.6375, 2.35375)

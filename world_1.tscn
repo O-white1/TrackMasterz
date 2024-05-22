@@ -61,9 +61,4 @@ MAX_STEER = 0.5
 transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -5.10329, 18.573, -45.7046)
 next_level = "world_2"
 
-[node name="Label" type="Label" parent="."]
-offset_right = 1154.0
-offset_bottom = 642.0
-text = "Speed: "
-
 [connection signal="tree_entered" from="Car" to="Car" method="_on_tree_entered"]

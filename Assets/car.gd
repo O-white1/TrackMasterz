@@ -6,7 +6,11 @@ var MAX_RPM = 300
 var MAX_TORQUE = 350
 var HORSE_POWER = 350
 const Gravity = 9.8
-var timer = 10000
+var timer = 500
+var used = false
+
+func rounds(num, digit):
+	return round(num * pow(10.0, digit)) / pow(10.0, digit)
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
@@ -15,17 +19,26 @@ func calc_engine_force(accel, rpm):
 	return accel*MAX_TORQUE*(1 - rpm / MAX_RPM)
 
 func _physics_process(delta):
-	if Input.is_action_pressed("goatedWithTheSWAWS") and timer > 0:
+	
+	if Input.is_action_pressed("goatedWithTheSWAWS") and not used:
+		if timer == 0:
+			used = true
 		MAX_RPM = 400
 		MAX_TORQUE = 450
 		HORSE_POWER = 450
-		timer = 10000
+		if timer > 0:
+			timer -= 1
 	else:
 		MAX_RPM = 300
 		MAX_TORQUE = 350
 		HORSE_POWER = 350
-		if timer != 0:
-			timer -= 1
+		if timer == 500:
+			used = false
+		if timer < 500 and used:
+			timer += 1
+	if not used:
+		$ProgressBar.value = timer
+		
 	Reset()
 	HardReset()
 	steering = lerp(steering, Input.get_axis("ui_right", "ui_left") * MAX_STEER, delta * 5)
@@ -44,7 +57,8 @@ func _physics_process(delta):
 	$backRight.engine_force = calc_engine_force(accel, abs($backRight.get_rpm()))
 	
 	var fwd_mps = abs((self.linear_velocity * self.transform.basis).z)
-	#$Label.text = "%d MPH" % (fwd_mps * 2.23694)
+	$Label.text = str(rounds(fwd_mps,2))
+	
 	
 	$centerMass.global_position = $centerMass.global_position.lerp(self.global_position, delta * 20.0)
 	$centerMass.transform = $centerMass.transform.interpolate_with(self.transform, delta * 5.0)
