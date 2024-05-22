@@ -60,8 +60,8 @@ func _physics_process(delta):
 	$Label.text = "Speed: " + str(rounds(fwd_mps,2))
 	
 	
-	$centerMass.global_position = $centerMass.global_position.lerp(self.global_position, delta * 20.0)
-	$centerMass.transform = $centerMass.transform.interpolate_with(self.transform, delta * 5.0)
+	#$centerMass.global_position = $centerMass.global_position.lerp(self.global_position, delta * 20.0)
+	#$centerMass.transform = $centerMass.transform.interpolate_with(self.transform, delta * 5.0)
 func HardReset():
 	if Input.is_action_just_pressed("HardReset"):
 		get_tree().change_scene_to_file("res://"+level+".tscn")
