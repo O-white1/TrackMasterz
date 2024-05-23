@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bnto3syd2ib2w"]
 
 [ext_resource type="Script" path="res://Assets/car.gd" id="1_763ql"]
-[ext_resource type="PackedScene" path="res://tinkercad_gltf_scene.tscn" id="2_fbd77"]
+[ext_resource type="PackedScene" uid="uid://bsvesbr1f0whd" path="res://tinkercad_gltf_scene.tscn" id="2_fbd77"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_bqn7f"]
 
