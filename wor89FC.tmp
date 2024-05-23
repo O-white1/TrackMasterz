@@ -71,6 +71,4 @@ mesh = SubResource("SphereMesh_mlxl2")
 shape = SubResource("SphereShape3D_5eg23")
 
 [node name="race" parent="." groups=["Player"] instance=ExtResource("3_2sjnc")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 6.42818, 6.96373, 3.75622)
-MAX_STEER = 0.4
-level = "world_1"
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 6.42818, 5.5, 3.75622)
