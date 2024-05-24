@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://cwi4p68wejldu"]
 
 [ext_resource type="MeshLibrary" uid="uid://7tuh7tgnn4so" path="res://track.tres" id="1_ubw2b"]
-[ext_resource type="PackedScene" uid="uid://c7whj7lawl0jm" path="res://rc_player.tscn" id="3_2sjnc"]
+[ext_resource type="PackedScene" uid="uid://bnto3syd2ib2w" path="res://Assets/cars/car.tscn" id="2_y6452"]
 [ext_resource type="PackedScene" uid="uid://bjfumrcl2ug8b" path="res://level_un_de_rs_co_re_swaw_s.tscn" id="3_n32wc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ybdk5"]
@@ -70,7 +70,7 @@ mesh = SubResource("SphereMesh_mlxl2")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
 shape = SubResource("SphereShape3D_5eg23")
 
-[node name="race" parent="." groups=["Player"] instance=ExtResource("3_2sjnc")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 6.42818, 6.96373, 3.75622)
-MAX_STEER = 0.4
-level = "world_1"
+[node name="Car" parent="." groups=["Player"] instance=ExtResource("2_y6452")]
+transform = Transform3D(-0.994256, 0, 0.107028, 0, 1, 0, -0.107028, 0, -0.994256, 5.39472, 6.5, 4.38616)
+mass = 7500.0
+physics_material_override = null
