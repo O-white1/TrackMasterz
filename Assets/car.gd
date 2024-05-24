@@ -1,5 +1,5 @@
 extends VehicleBody3D
-
+#we're all goofy goobers YEEEEEAAAAAAHHHHH!!!!
 @export var MAX_STEER = .4
 @export var level = ""
 var MAX_RPM = 300
