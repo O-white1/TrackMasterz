@@ -1,6 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://b6eux01rtph5o"]
+[gd_scene load_steps=7 format=3 uid="uid://b6eux01rtph5o"]
 
-[ext_resource type="PackedScene" uid="uid://bnto3syd2ib2w" path="res://Assets/cars/car.tscn" id="1_1y3rf"]
+[ext_resource type="PackedScene" uid="uid://c7whj7lawl0jm" path="res://rc_player.tscn" id="1_xmtke"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_np4jj"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_e0sjk"]
+sky_material = SubResource("ProceduralSkyMaterial_np4jj")
+
+[sub_resource type="Environment" id="Environment_irch6"]
+background_mode = 2
+sky = SubResource("Sky_e0sjk")
+tonemap_mode = 2
+glow_enabled = true
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_vkta4"]
 
@@ -10,11 +23,17 @@ albedo_texture = SubResource("NoiseTexture2D_vkta4")
 
 [node name="Node3D" type="Node3D"]
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_irch6")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(1000, 0, 0, 0, 1, 0, 0, 0, 1000, 0, 0, 0)
 use_collision = true
 material = SubResource("StandardMaterial3D_rnfcg")
 
-[node name="Car" parent="." instance=ExtResource("1_1y3rf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.11149, 1.6375, 2.35375)
-level = "Test_World"
+[node name="race" parent="." instance=ExtResource("1_xmtke")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, -0.490642, 0.5, -1.41002)

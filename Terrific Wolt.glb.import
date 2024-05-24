@@ -32,7 +32,9 @@ import_script/path=""
 _subresources={
 "nodes": {
 "PATH:Node/Mesh_Mesh_head_geo_001_lambert2SG_001": {
-"generate/physics": true
+"generate/physics": true,
+"physics/physics_material_override": Object(PhysicsMaterial,"resource_local_to_scene":false,"resource_name":"","friction":1.0,"rough":false,"bounce":0.0,"absorbent":false,"script":null)
+
 }
 }
 }
