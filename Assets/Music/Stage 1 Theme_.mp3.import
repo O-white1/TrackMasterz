@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b4s02n514uifi"
+path="res://.godot/imported/Stage 1 Theme_.mp3-c7a220addcadafdac1ae36c72762d0e5.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/Stage 1 Theme_.mp3"
+dest_files=["res://.godot/imported/Stage 1 Theme_.mp3-c7a220addcadafdac1ae36c72762d0e5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
