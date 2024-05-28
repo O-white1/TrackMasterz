@@ -9,3 +9,5 @@ func _on_body_entered(body):
 		await get_tree().create_timer(0.1).timeout
 		var lvl = "res://" + next_level + ".tscn"
 		get_tree().change_scene_to_file(lvl)
+
+
