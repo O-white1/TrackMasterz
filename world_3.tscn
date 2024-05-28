@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://by5r4jow3fna"]
+[gd_scene load_steps=7 format=3 uid="uid://by5r4jow3fna"]
 
 [ext_resource type="MeshLibrary" uid="uid://7tuh7tgnn4so" path="res://track.tres" id="1_yhuan"]
-[ext_resource type="PackedScene" uid="uid://c7whj7lawl0jm" path="res://rc_player.tscn" id="2_xruj1"]
+[ext_resource type="PackedScene" uid="uid://bnto3syd2ib2w" path="res://Assets/cars/car.tscn" id="2_2135o"]
+[ext_resource type="PackedScene" uid="uid://bjfumrcl2ug8b" path="res://level_un_de_rs_co_re_swaw_s.tscn" id="3_2l0fv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_v0cii"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -36,5 +37,10 @@ data = {
 }
 metadata/_editor_floor_ = Vector3(0, 1, 0)
 
-[node name="race" parent="." groups=["Player"] instance=ExtResource("2_xruj1")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 12.4503, 5.5, 13.8957)
+[node name="Car" parent="." instance=ExtResource("2_2135o")]
+transform = Transform3D(0.00176282, 0, -0.999998, 0, 1, 0, 0.999998, 0, 0.00176282, 12.7883, 5.5, 14.6498)
+level = "world_3"
+
+[node name="LevelUnDeRsCoReSwawS" parent="." instance=ExtResource("3_2l0fv")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 40.8273, 9.08965, -4.75817)
+next_level = "world_4"

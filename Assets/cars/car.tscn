@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bnto3syd2ib2w"]
+[gd_scene load_steps=6 format=3 uid="uid://bnto3syd2ib2w"]
 
 [ext_resource type="Script" path="res://Assets/car.gd" id="1_763ql"]
 [ext_resource type="PackedScene" uid="uid://ddui6b5kma0os" path="res://tinkercad_gltf_scene.tscn" id="2_fbd77"]
@@ -8,62 +8,68 @@
 [sub_resource type="LabelSettings" id="LabelSettings_m74cl"]
 font_size = 50
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_22lhs"]
-size = Vector3(1.55457, 0.741943, 2.91559)
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_n0jq6"]
+radius = 0.3
+height = 5.0
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_eagvl"]
-size = Vector3(1, 0.391052, 1.40308)
-
-[node name="Car" type="VehicleBody3D"]
+[node name="Car" type="VehicleBody3D" groups=["Player"]]
 mass = 2000.0
 physics_material_override = SubResource("PhysicsMaterial_bqn7f")
 script = ExtResource("1_763ql")
 level = "world_1"
 
 [node name="frontLeft" type="VehicleWheel3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, -8.74228e-08, 0, 8.74228e-08, 0.5, -0.364873, 0.3, 1.22374)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, -8.74228e-08, 0, 8.74228e-08, 0.5, -1.7, 0.3, 2.25)
 use_as_traction = true
 use_as_steering = true
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="frontLeft"]
 transform = Transform3D(-8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0, 0, 0, 0.2, 0, 0, 0)
+transparency = 1.0
+cast_shadow = 0
 radius = 2.5
 height = 0.5
 sides = 32
 
 [node name="frontRight" type="VehicleWheel3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.981194, 0.3, 1.22185)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.7, 0.3, 2.25)
 use_as_traction = true
 use_as_steering = true
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="frontRight"]
 transform = Transform3D(-8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0, 0, 0, 0.2, 0, 0, 0)
+transparency = 1.0
+cast_shadow = 0
 radius = 2.5
 height = 0.5
 sides = 32
 
 [node name="backLeft" type="VehicleWheel3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.342546, 0.3, -0.8)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.7, 0.3, -1.8)
 use_as_traction = true
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="backLeft"]
 transform = Transform3D(-8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0, 0, 0, 0.2, -0.0540464, 0, 0)
+transparency = 1.0
+cast_shadow = 0
 radius = 2.5
 height = 0.5
 sides = 32
 
 [node name="backRight" type="VehicleWheel3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.986595, 0.3, -0.8)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.7, 0.3, -1.8)
 use_as_traction = true
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="backRight"]
 transform = Transform3D(-8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0, 0, 0, 0.2, 0, 0, 0)
+transparency = 1.0
+cast_shadow = 0
 radius = 2.5
 height = 0.5
 sides = 32
 
 [node name="centerMass" type="CSGBox3D" parent="."]
-transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 0.368342, 0.583754, 0.265492)
+transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 0.25, 0.614802, 0.710601)
 size = Vector3(0, 0, 0)
 
 [node name="Camera3D" type="Camera3D" parent="."]
@@ -84,12 +90,12 @@ offset_bottom = 63.0
 max_value = 500.0
 
 [node name="Tinkercad GLTF Scene" parent="." groups=["Player"] instance=ExtResource("2_fbd77")]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -0.3, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." groups=["Player"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.20074, 0.355835, 0.0892029)
-shape = SubResource("BoxShape3D_22lhs")
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -1, 0.5, 0)
+shape = SubResource("CapsuleShape3D_n0jq6")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.902206, -0.0499268)
-shape = SubResource("BoxShape3D_eagvl")
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." groups=["Player"]]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1, 0.5, 0)
+shape = SubResource("CapsuleShape3D_n0jq6")

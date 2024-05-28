@@ -70,7 +70,7 @@ mesh = SubResource("SphereMesh_mlxl2")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
 shape = SubResource("SphereShape3D_5eg23")
 
-[node name="Car" parent="." groups=["Player"] instance=ExtResource("2_y6452")]
+[node name="Car" parent="." instance=ExtResource("2_y6452")]
 transform = Transform3D(-0.994256, 0, 0.107028, 0, 1, 0, -0.107028, 0, -0.994256, 5.39472, 6.5, 4.38616)
 mass = 1500.0
 physics_material_override = null

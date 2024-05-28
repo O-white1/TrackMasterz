@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://b6eux01rtph5o"]
 
-[ext_resource type="PackedScene" uid="uid://c7whj7lawl0jm" path="res://rc_player.tscn" id="1_xmtke"]
+[ext_resource type="PackedScene" uid="uid://bnto3syd2ib2w" path="res://Assets/cars/car.tscn" id="1_84cgm"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_np4jj"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -35,5 +35,5 @@ transform = Transform3D(1000, 0, 0, 0, 1, 0, 0, 0, 1000, 0, 0, 0)
 use_collision = true
 material = SubResource("StandardMaterial3D_rnfcg")
 
-[node name="race" parent="." instance=ExtResource("1_xmtke")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, -0.490642, 0.5, -1.41002)
+[node name="Car" parent="." instance=ExtResource("1_84cgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0988156, 0.5, 1.6559)
