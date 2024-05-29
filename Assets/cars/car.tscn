@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bnto3syd2ib2w"]
+[gd_scene load_steps=7 format=3 uid="uid://bnto3syd2ib2w"]
 
 [ext_resource type="Script" path="res://Assets/car.gd" id="1_763ql"]
 [ext_resource type="PackedScene" uid="uid://ddui6b5kma0os" path="res://tinkercad_gltf_scene.tscn" id="2_fbd77"]
@@ -11,6 +11,9 @@ font_size = 50
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_n0jq6"]
 radius = 0.3
 height = 5.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_vpxoo"]
+font_size = 40
 
 [node name="Car" type="VehicleBody3D" groups=["Player"]]
 mass = 2000.0
@@ -99,3 +102,11 @@ shape = SubResource("CapsuleShape3D_n0jq6")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="." groups=["Player"]]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1, 0.5, 0)
 shape = SubResource("CapsuleShape3D_n0jq6")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 769.0
+offset_top = 4.0
+offset_right = 923.0
+offset_bottom = 68.0
+text = "Time"
+label_settings = SubResource("LabelSettings_vpxoo")
