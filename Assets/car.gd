@@ -8,6 +8,7 @@ var HORSE_POWER = 350
 const Gravity = 9.8
 var timer = 500
 var used = false
+var time = 0
 
 func rounds(num, digit):
 	return round(num * pow(10.0, digit)) / pow(10.0, digit)
@@ -19,6 +20,7 @@ func calc_engine_force(accel, rpm):
 	return accel*MAX_TORQUE*(1 - rpm / MAX_RPM)
 
 func _physics_process(delta):
+	time += 1
 	
 	if Input.is_action_pressed("goatedWithTheSWAWS") and not used:
 		if timer == 0:
@@ -58,7 +60,7 @@ func _physics_process(delta):
 	
 	var fwd_mps = abs((self.linear_velocity * self.transform.basis).z)
 	$Label.text = "Speed: " + str(rounds(fwd_mps,2))
-	
+	$Label2.text =str(int(time/600)) + ":" + str(int(time/10) % 60)
 	
 	#$centerMass.global_position = $centerMass.global_position.lerp(self.global_position, delta * 20.0)
 	#$centerMass.transform = $centerMass.transform.interpolate_with(self.transform, delta * 5.0)

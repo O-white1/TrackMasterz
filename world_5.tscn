@@ -1,12 +1,33 @@
-[gd_scene load_steps=3 format=3 uid="uid://n83gao32oxqn"]
+[gd_scene load_steps=7 format=3 uid="uid://b1ic07wwkyqv0"]
 
 [ext_resource type="MeshLibrary" uid="uid://7tuh7tgnn4so" path="res://track.tres" id="1_3vnwv"]
-[ext_resource type="Script" path="res://world_5.gd" id="1_vnwbv"]
+[ext_resource type="PackedScene" uid="uid://bnto3syd2ib2w" path="res://Assets/cars/car.tscn" id="2_rwlhb"]
+[ext_resource type="PackedScene" uid="uid://bjfumrcl2ug8b" path="res://level_un_de_rs_co_re_swaw_s.tscn" id="3_gf5ws"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_eaumj"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_8aq6e"]
+sky_material = SubResource("ProceduralSkyMaterial_eaumj")
+
+[sub_resource type="Environment" id="Environment_wgumf"]
+background_mode = 2
+sky = SubResource("Sky_8aq6e")
+tonemap_mode = 2
+glow_enabled = true
 
 [node name="world_5" type="Node3D"]
-script = ExtResource("1_vnwbv")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_wgumf")
 
 [node name="GridMap" type="GridMap" parent="."]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 mesh_library = ExtResource("1_3vnwv")
 cell_size = Vector3(1, 1, 1)
 data = {
@@ -14,4 +35,10 @@ data = {
 }
 metadata/_editor_floor_ = Vector3(0, 1, 0)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="Car" parent="." instance=ExtResource("2_rwlhb")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -33.2356, 18.8705, 116.693)
+level = "world_5"
+
+[node name="LevelUnDeRsCoReSwawS" parent="." instance=ExtResource("3_gf5ws")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 8.74817, 5.575, 105.358)
+next_level = "end_un_de_rs_co_re_screen"
