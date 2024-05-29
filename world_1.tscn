@@ -65,6 +65,7 @@ next_level = "world_2"
 transform = Transform3D(0.128595, 0.991684, -0.00511401, -0.991683, 0.128564, -0.00596009, -0.00525305, 0.00583792, 0.999969, 0, 10, -10)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+transform = Transform3D(1, -2.98314e-10, 4.65661e-10, -3.00824e-08, 1, -9.31323e-10, 9.31323e-10, -9.31323e-10, 1, 0.480292, 3.70387, -0.0191002)
 mesh = SubResource("SphereMesh_mlxl2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
