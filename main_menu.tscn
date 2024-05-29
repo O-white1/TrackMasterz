@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://da8rvy5t550h0"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_u3saw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_itkog"]
+font_size = 64
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u3saw")
+
+[node name="Play" type="Button" parent="."]
+offset_left = 448.0
+offset_top = 256.0
+offset_right = 704.0
+offset_bottom = 398.0
+text = "Play
+"
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 456.0
+offset_top = 448.0
+offset_right = 704.0
+offset_bottom = 590.0
+text = "Quit
+"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 208.0
+text = "TrackMasterz
+"
+label_settings = SubResource("LabelSettings_itkog")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
