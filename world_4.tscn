@@ -1,10 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://thf3jwgtnupl"]
+[gd_scene load_steps=5 format=3 uid="uid://thf3jwgtnupl"]
 
+[ext_resource type="Script" path="res://world_4.gd" id="1_bfvyb"]
 [ext_resource type="MeshLibrary" uid="uid://7tuh7tgnn4so" path="res://track.tres" id="1_mcftq"]
 [ext_resource type="PackedScene" uid="uid://bnto3syd2ib2w" path="res://Assets/cars/car.tscn" id="2_qiy05"]
 [ext_resource type="PackedScene" uid="uid://bjfumrcl2ug8b" path="res://level_un_de_rs_co_re_swaw_s.tscn" id="3_fi1hf"]
 
 [node name="world_4" type="Node3D"]
+script = ExtResource("1_bfvyb")
 
 [node name="GridMap" type="GridMap" parent="."]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
@@ -21,3 +23,5 @@ level = "world_4"
 
 [node name="LevelUnDeRsCoReSwawS" parent="." instance=ExtResource("3_fi1hf")]
 transform = Transform3D(-2.18557e-07, 0, 5, 0, 5, 0, -5, 0, -2.18557e-07, 35.4695, 316.882, 267.255)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
