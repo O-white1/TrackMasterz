@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://da8rvy5t550h0"]
+[gd_scene load_steps=3 format=3 uid="uid://se78rhswo44m"]
 
 [ext_resource type="Script" path="res://main_menu.gd" id="1_u3saw"]
 
@@ -15,6 +15,7 @@ grow_vertical = 2
 script = ExtResource("1_u3saw")
 
 [node name="Play" type="Button" parent="."]
+layout_mode = 0
 offset_left = 448.0
 offset_top = 256.0
 offset_right = 704.0
@@ -23,6 +24,7 @@ text = "Play
 "
 
 [node name="Quit" type="Button" parent="."]
+layout_mode = 0
 offset_left = 456.0
 offset_top = 448.0
 offset_right = 704.0

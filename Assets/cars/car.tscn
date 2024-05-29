@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bnto3syd2ib2w"]
+[gd_scene load_steps=7 format=3 uid="uid://bnto3syd2ib2w"]
 
 [ext_resource type="Script" path="res://Assets/car.gd" id="1_763ql"]
 [ext_resource type="PackedScene" uid="uid://ddui6b5kma0os" path="res://tinkercad_gltf_scene.tscn" id="2_fbd77"]
@@ -11,6 +11,8 @@ font_size = 50
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_n0jq6"]
 radius = 0.3
 height = 5.0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fh4ce"]
 
 [node name="Car" type="VehicleBody3D" groups=["Player"]]
 mass = 2000.0
@@ -105,3 +107,11 @@ offset_left = 949.0
 offset_top = 77.0
 offset_right = 1110.0
 offset_bottom = 183.0
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 0, -4.37114e-08, 1.91069e-15, -1, 1, -4.37114e-08, -4.37114e-08, 0.0499331, 0.707506, 1.32048)
+shape = SubResource("CapsuleShape3D_fh4ce")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 0, -4.37114e-08, 1.91069e-15, -1, 1, -4.37114e-08, -4.37114e-08, 0.0499331, 0.765357, -1.46255)
+shape = SubResource("CapsuleShape3D_fh4ce")

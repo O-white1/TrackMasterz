@@ -64,10 +64,10 @@ transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -5.103
 next_level = "world_2"
 
 [node name="RigidBody3D" type="RigidBody3D" parent="."]
-transform = Transform3D(0.128595, 0.991684, -0.00511401, -0.991683, 0.128564, -0.00596009, -0.00525305, 0.00583792, 0.999969, 0, 10, -10)
+transform = Transform3D(0.128595, 0.991684, -0.00511401, -0.991683, 0.128564, -0.00596009, -0.00525305, 0.00583792, 0.999969, 4.43225, 10, -10)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
-transform = Transform3D(1, -2.98314e-10, 4.65661e-10, -3.00824e-08, 1, -9.31323e-10, 9.31323e-10, -9.31323e-10, 1, 0.480292, 3.70387, -0.0191002)
+transform = Transform3D(1, -2.94676e-10, 4.65661e-10, -5.98811e-08, 1, -1.86265e-09, 1.39698e-09, -1.86265e-09, 1, -0.000533104, -0.0041039, 2.09808e-05)
 mesh = SubResource("SphereMesh_mlxl2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
