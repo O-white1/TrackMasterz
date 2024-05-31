@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://cwi4p68wejldu"]
+[gd_scene load_steps=11 format=3 uid="uid://cwi4p68wejldu"]
 
 [ext_resource type="Script" path="res://world_1.gd" id="1_4va60"]
 [ext_resource type="MeshLibrary" uid="uid://7tuh7tgnn4so" path="res://track.tres" id="1_ubw2b"]
 [ext_resource type="PackedScene" uid="uid://bnto3syd2ib2w" path="res://Assets/cars/car.tscn" id="2_y6452"]
 [ext_resource type="PackedScene" uid="uid://bjfumrcl2ug8b" path="res://level_un_de_rs_co_re_swaw_s.tscn" id="3_n32wc"]
+[ext_resource type="AudioStream" uid="uid://b4s02n514uifi" path="res://Assets/Music/Stage 1 Theme_.mp3" id="5_4ogv2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ybdk5"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -79,6 +80,9 @@ mass = 1500.0
 physics_material_override = null
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_4ogv2")
+volume_db = 1.0
+autoplay = true
 
 [connection signal="ready" from="." to="LevelUnDeRsCoReSwawS" method="_on_world_1_ready"]
 [connection signal="ready" from="AudioStreamPlayer" to="LevelUnDeRsCoReSwawS" method="_on_audio_stream_player_ready"]

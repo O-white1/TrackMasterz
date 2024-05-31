@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://by5r4jow3fna"]
+[gd_scene load_steps=9 format=3 uid="uid://by5r4jow3fna"]
 
 [ext_resource type="Script" path="res://world_3.gd" id="1_eqtm1"]
 [ext_resource type="MeshLibrary" uid="uid://7tuh7tgnn4so" path="res://track.tres" id="1_yhuan"]
 [ext_resource type="PackedScene" uid="uid://bnto3syd2ib2w" path="res://Assets/cars/car.tscn" id="2_2135o"]
 [ext_resource type="PackedScene" uid="uid://bjfumrcl2ug8b" path="res://level_un_de_rs_co_re_swaw_s.tscn" id="3_2l0fv"]
+[ext_resource type="AudioStream" uid="uid://ehvo86uji4f3" path="res://Assets/Music/Stage 4 Theme_(1).mp3" id="5_km0sn"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_v0cii"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -48,3 +49,6 @@ transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 40.8273, 9.08965, -4.75817)
 next_level = "world_4"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_km0sn")
+volume_db = 1.0
+autoplay = true

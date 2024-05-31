@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://b1ic07wwkyqv0"]
+[gd_scene load_steps=8 format=3 uid="uid://b1ic07wwkyqv0"]
 
 [ext_resource type="MeshLibrary" uid="uid://7tuh7tgnn4so" path="res://track.tres" id="1_3vnwv"]
 [ext_resource type="PackedScene" uid="uid://bnto3syd2ib2w" path="res://Assets/cars/car.tscn" id="2_rwlhb"]
 [ext_resource type="PackedScene" uid="uid://bjfumrcl2ug8b" path="res://level_un_de_rs_co_re_swaw_s.tscn" id="3_gf5ws"]
+[ext_resource type="AudioStream" uid="uid://bidqki4lchev0" path="res://Assets/Music/One for the Ages.mp3" id="4_ekv1s"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_eaumj"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -42,3 +43,8 @@ level = "world_5"
 [node name="LevelUnDeRsCoReSwawS" parent="." instance=ExtResource("3_gf5ws")]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 8.74817, 5.575, 105.358)
 next_level = "end_un_de_rs_co_re_screen"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ekv1s")
+volume_db = 1.0
+autoplay = true
