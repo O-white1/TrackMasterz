@@ -1,5 +1,4 @@
 extends VehicleBody3D
-
 @export var MAX_STEER = .4
 @export var level = ""
 var MAX_RPM = 300
@@ -9,6 +8,7 @@ const Gravity = 9.8
 var timer = 500
 var used = false
 var time = 0
+var keyPressed = false
 
 func rounds(num, digit):
 	return round(num * pow(10.0, digit)) / pow(10.0, digit)
@@ -20,7 +20,13 @@ func calc_engine_force(accel, rpm):
 	return accel*MAX_TORQUE*(1 - rpm / MAX_RPM)
 
 func _physics_process(delta):
-	time += 1
+	
+	if Input.is_anything_pressed():
+		keyPressed = true
+		
+		
+	if keyPressed:
+		timer += 1
 	
 	if Input.is_action_pressed("goatedWithTheSWAWS") and not used:
 		if timer == 0:
@@ -38,6 +44,9 @@ func _physics_process(delta):
 			used = false
 		if timer < 500 and used:
 			timer += 1
+	
+	if Input.is_action_just_pressed("pause"):
+		$PauseMenu.visible = true
 	
 		
 	Reset()

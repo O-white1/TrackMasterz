@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bnto3syd2ib2w"]
+[gd_scene load_steps=8 format=3 uid="uid://bnto3syd2ib2w"]
 
 [ext_resource type="Script" path="res://Assets/car.gd" id="1_763ql"]
 [ext_resource type="PackedScene" uid="uid://ddui6b5kma0os" path="res://tinkercad_gltf_scene.tscn" id="2_fbd77"]
+[ext_resource type="PackedScene" uid="uid://bise650l5jn27" path="res://pause_menu.tscn" id="3_q8df5"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_bqn7f"]
 
@@ -124,3 +125,11 @@ offset_bottom = 151.0
 text = "R for upright, Q for reset
 SpaceBar for Boost
 "
+
+[node name="PauseMenu" parent="." instance=ExtResource("3_q8df5")]
+visible = false
+offset_left = -3.0
+offset_top = 3.0
+offset_right = -3.0
+offset_bottom = 3.0
+pivot_offset = Vector2(966.576, 213.306)
