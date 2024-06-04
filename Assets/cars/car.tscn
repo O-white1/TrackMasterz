@@ -22,7 +22,7 @@ script = ExtResource("1_763ql")
 level = "world_1"
 
 [node name="frontLeft" type="VehicleWheel3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, -8.74228e-08, 0, 8.74228e-08, 0.5, -1.7, 0.3, 2.25)
+transform = Transform3D(50, 0, 0, 0, 10, -1.74846e-06, 0, 1.74846e-06, 10, -1.7, 0.3, 2.25)
 use_as_traction = true
 use_as_steering = true
 
@@ -35,7 +35,7 @@ height = 0.5
 sides = 32
 
 [node name="frontRight" type="VehicleWheel3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.7, 0.3, 2.25)
+transform = Transform3D(50, 0, 0, 0, 10, 0, 0, 0, 10, 1.7, 0.3, 2.25)
 use_as_traction = true
 use_as_steering = true
 
@@ -48,7 +48,7 @@ height = 0.5
 sides = 32
 
 [node name="backLeft" type="VehicleWheel3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.7, 0.3, -1.8)
+transform = Transform3D(50, 0, 0, 0, 10, 0, 0, 0, 10, -1.7, 0.3, -1.8)
 use_as_traction = true
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="backLeft"]
@@ -60,7 +60,7 @@ height = 0.5
 sides = 32
 
 [node name="backRight" type="VehicleWheel3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.7, 0.3, -1.8)
+transform = Transform3D(50, 0, 0, 0, 10, 0, 0, 0, 10, 1.7, 0.3, -1.8)
 use_as_traction = true
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="backRight"]
@@ -71,17 +71,20 @@ radius = 2.5
 height = 0.5
 sides = 32
 
-[node name="centerMass" type="CSGBox3D" parent="."]
-transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 0.25, 0.614802, 0.710601)
-size = Vector3(0, 0, 0)
+[node name="centerMass" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.26, 0)
+top_level = true
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-1, -2.70151e-08, 8.3144e-08, 0, 0.951056, 0.309017, -8.74228e-08, 0.309017, -0.951056, 0, 2.71142, -5.20308)
+[node name="Camera3D" type="Camera3D" parent="centerMass"]
+transform = Transform3D(-1, 2.70151e-08, -8.3144e-08, 0, 0.951057, 0.309017, 8.74228e-08, 0.309017, -0.951057, -1.35856e-07, 2.59817, -4.40232)
 current = true
+fov = 80.0
 
 [node name="Label" type="Label" parent="."]
-offset_right = 1169.0
-offset_bottom = 627.0
+offset_top = 8.0
+offset_right = 1154.0
+offset_bottom = 650.0
+mouse_filter = 1
 text = "Test"
 label_settings = SubResource("LabelSettings_m74cl")
 
@@ -90,6 +93,7 @@ offset_left = 939.0
 offset_top = 22.0
 offset_right = 1103.0
 offset_bottom = 63.0
+mouse_filter = 1
 max_value = 500.0
 
 [node name="Tinkercad GLTF Scene" parent="." groups=["Player"] instance=ExtResource("2_fbd77")]
@@ -108,6 +112,7 @@ offset_left = 949.0
 offset_top = 77.0
 offset_right = 1110.0
 offset_bottom = 183.0
+mouse_filter = 1
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
 transform = Transform3D(-4.37114e-08, -1, 0, -4.37114e-08, 1.91069e-15, -1, 1, -4.37114e-08, -4.37114e-08, 0.0499331, 0.707506, 1.32048)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://b1ic07wwkyqv0"]
 
-[ext_resource type="MeshLibrary" uid="uid://7tuh7tgnn4so" path="res://track.tres" id="1_3vnwv"]
+[ext_resource type="MeshLibrary" uid="uid://dutspxu6gdtyl" path="res://track.tres" id="1_3vnwv"]
 [ext_resource type="PackedScene" uid="uid://bnto3syd2ib2w" path="res://Assets/cars/car.tscn" id="2_rwlhb"]
 [ext_resource type="PackedScene" uid="uid://bjfumrcl2ug8b" path="res://level_un_de_rs_co_re_swaw_s.tscn" id="3_gf5ws"]
 [ext_resource type="AudioStream" uid="uid://bidqki4lchev0" path="res://Assets/Music/One for the Ages.mp3" id="4_ekv1s"]

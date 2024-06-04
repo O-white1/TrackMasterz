@@ -8,7 +8,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
+mouse_filter = 1
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
@@ -16,6 +16,7 @@ offset_left = 384.0
 offset_top = 64.0
 offset_right = 832.0
 offset_bottom = 576.0
+mouse_filter = 1
 
 [node name="Continue" type="Button" parent="Panel"]
 layout_mode = 0
@@ -23,22 +24,28 @@ offset_left = 64.0
 offset_top = 64.0
 offset_right = 384.0
 offset_bottom = 128.0
+mouse_filter = 1
 text = "Continue
 "
 
 [node name="Continue2" type="Button" parent="Panel"]
+layout_mode = 0
 offset_left = 64.0
 offset_top = 192.0
 offset_right = 384.0
 offset_bottom = 256.0
 pivot_offset = Vector2(224, 136)
+mouse_filter = 1
 text = "Settings ()
 "
 
 [node name="Continue3" type="Button" parent="Panel"]
+layout_mode = 0
 offset_left = 64.0
 offset_top = 320.0
 offset_right = 384.0
 offset_bottom = 448.0
+mouse_filter = 1
+mouse_force_pass_scroll_events = false
 text = "Continue
 "

@@ -1,11 +1,11 @@
 extends VehicleBody3D
-@export var MAX_STEER = .4
+@export var MAX_STEER = .5
 @export var level = ""
-var MAX_RPM = 300
-var MAX_TORQUE = 350
-var HORSE_POWER = 350
+var MAX_RPM = 700
+var MAX_TORQUE = 850
+var HORSE_POWER = 850
 const Gravity = 9.8
-var timer = 500
+var boost = 500
 var used = false
 var time = 0
 var keyPressed = false
@@ -20,33 +20,37 @@ func calc_engine_force(accel, rpm):
 	return accel*MAX_TORQUE*(1 - rpm / MAX_RPM)
 
 func _physics_process(delta):
+	$centerMass.global_position = $centerMass.global_position.lerp(self.global_position, delta * 20.0)
+	$centerMass.transform = $centerMass.transform.interpolate_with(self.transform, delta * 5.0)
+	$centerMass/Camera3D.look_at(self.global_position.lerp(self.global_position + self.linear_velocity, delta*5.0))
 	
 	if Input.is_anything_pressed():
 		keyPressed = true
 		
 		
 	if keyPressed:
-		timer += 1
+		time += .15
 	
 	if Input.is_action_pressed("goatedWithTheSWAWS") and not used:
-		if timer == 0:
+		if boost == 0:
 			used = true
 		MAX_RPM = 400
 		MAX_TORQUE = 450
 		HORSE_POWER = 450
-		if timer > 0:
-			timer -= 1
+		if boost > 0:
+			boost -= 1
 	else:
 		MAX_RPM = 300
 		MAX_TORQUE = 350
 		HORSE_POWER = 350
-		if timer == 500:
+		if boost == 500:
 			used = false
-		if timer < 500 and used:
-			timer += 1
+		if boost < 500 and used:
+			boost += 1
 	
 	if Input.is_action_just_pressed("pause"):
-		$PauseMenu.visible = true
+		get_tree().paused = not get_tree().paused
+		$PauseMenu.visible = not $PauseMenu.visible 
 	
 		
 	Reset()
@@ -61,7 +65,7 @@ func _physics_process(delta):
 	steering = lerp(steering, Input.get_axis("ui_right", "ui_left") * MAX_STEER, delta * 5)
 	
 	
-	$ProgressBar.value = timer
+	$ProgressBar.value = boost
 	
 	
 	$backLeft.engine_force = calc_engine_force(accel, abs($backLeft.get_rpm()))
@@ -71,8 +75,10 @@ func _physics_process(delta):
 	$Label.text = "Speed: " + str(rounds(fwd_mps,2))
 	$Label2.text =str(int(time/600)) + ":" + str(int(time/10) % 60)
 	
-	#$centerMass.global_position = $centerMass.global_position.lerp(self.global_position, delta * 20.0)
-	#$centerMass.transform = $centerMass.transform.interpolate_with(self.transform, delta * 5.0)
+	
+	
+
+	
 func HardReset():
 	if Input.is_action_just_pressed("HardReset"):
 		get_tree().change_scene_to_file("res://"+level+".tscn")
