@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://cwi4p68wejldu"]
 
 [ext_resource type="Script" path="res://world_1.gd" id="1_4va60"]
-[ext_resource type="MeshLibrary" uid="uid://7tuh7tgnn4so" path="res://track.tres" id="1_ubw2b"]
+[ext_resource type="MeshLibrary" uid="uid://dutspxu6gdtyl" path="res://track.tres" id="1_ubw2b"]
 [ext_resource type="PackedScene" uid="uid://bnto3syd2ib2w" path="res://Assets/cars/car.tscn" id="2_y6452"]
 [ext_resource type="PackedScene" uid="uid://bjfumrcl2ug8b" path="res://level_un_de_rs_co_re_swaw_s.tscn" id="3_n32wc"]
 [ext_resource type="AudioStream" uid="uid://b4s02n514uifi" path="res://Assets/Music/Stage 1 Theme_.mp3" id="5_4ogv2"]
@@ -38,6 +38,7 @@ glow_blend_mode = 1
 [sub_resource type="SphereShape3D" id="SphereShape3D_5eg23"]
 
 [node name="World1" type="Node3D"]
+process_mode = 1
 script = ExtResource("1_4va60")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]

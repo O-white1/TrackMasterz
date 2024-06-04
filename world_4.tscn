@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://thf3jwgtnupl"]
 
-[ext_resource type="MeshLibrary" uid="uid://7tuh7tgnn4so" path="res://track.tres" id="1_mcftq"]
+[ext_resource type="MeshLibrary" uid="uid://dutspxu6gdtyl" path="res://track.tres" id="1_mcftq"]
 [ext_resource type="PackedScene" uid="uid://bnto3syd2ib2w" path="res://Assets/cars/car.tscn" id="2_qiy05"]
 [ext_resource type="PackedScene" uid="uid://bjfumrcl2ug8b" path="res://level_un_de_rs_co_re_swaw_s.tscn" id="3_fi1hf"]
 [ext_resource type="AudioStream" uid="uid://c87qma53ylp47" path="res://Assets/Music/W Track.mp3" id="4_l87e8"]
