@@ -20,6 +20,7 @@ script = ExtResource("1_2cw8e")
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 448.0
+mouse_filter = 1
 text = "Congradulations!
 You did it.
 
@@ -35,6 +36,7 @@ offset_left = 262.0
 offset_top = 257.0
 offset_right = 414.0
 offset_bottom = 315.0
+mouse_filter = 1
 text = "Play Again"
 
 [node name="quit" type="Button" parent="."]
@@ -43,7 +45,9 @@ offset_left = 655.0
 offset_top = 255.0
 offset_right = 814.0
 offset_bottom = 311.0
+mouse_filter = 1
 text = "Quit"
 
+[connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="pressed" from="playAgain" to="." method="_on_play_again_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
