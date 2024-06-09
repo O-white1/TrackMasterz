@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://b1ic07wwkyqv0"]
+[gd_scene load_steps=9 format=3 uid="uid://b1ic07wwkyqv0"]
 
+[ext_resource type="Script" path="res://world_5.gd" id="1_1e8e2"]
 [ext_resource type="MeshLibrary" uid="uid://dutspxu6gdtyl" path="res://track.tres" id="1_3vnwv"]
 [ext_resource type="PackedScene" uid="uid://bnto3syd2ib2w" path="res://Assets/cars/car.tscn" id="2_rwlhb"]
 [ext_resource type="PackedScene" uid="uid://bjfumrcl2ug8b" path="res://level_un_de_rs_co_re_swaw_s.tscn" id="3_gf5ws"]
@@ -19,6 +20,7 @@ tonemap_mode = 2
 glow_enabled = true
 
 [node name="world_5" type="Node3D"]
+script = ExtResource("1_1e8e2")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
